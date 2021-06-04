@@ -1,5 +1,5 @@
 #Stopwords
-mystopwords <- tibble(word = c("frequency", "rate", "pathways","involving","chemical","reactions"))
+mystopwords <- tibble(word = c("frequency", "rate", "pathways","involving","chemical","reactions","assembly"))
 #Data Analysis for Wilma
 #Loading in data files from Wilma
 mddatp <- read.csv("MDD ATPase extracted gene lists_p0.05_enrichment.csv")

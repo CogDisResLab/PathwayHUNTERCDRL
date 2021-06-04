@@ -30,3 +30,9 @@ myGOID <- data.frame(lapply(myGOID, as.character), stringsAsFactors=FALSE)
 
 #Run PathwayHUNTER
 PathwayHUNTER(myGOID,8,"LazarTest2.csv",2)
+
+
+#Analysis of lazar terms versuse pathwayHUNTER terms
+
+Lterms <- read_csv("LazarTerms.csv")
+merged <- merge(LazarTest2, Lterms)

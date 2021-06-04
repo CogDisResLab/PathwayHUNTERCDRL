@@ -142,7 +142,7 @@ PathwayHUNTER <- function(x,y,z,num){
   myData[is.na(myData)] = 0
   
   #Marissa provided this
-  p <- dplyr::select(myData, -c(level,n.x,tf.x,idf.x,tf_idf.x,n.y,tf.y,idf.y,tf_idf.y,word.x,word.y,GOID,ClusterWord,cluster))
+  p <- dplyr::select(myData, -c(level,n.x,tf.x,idf.x,tf_idf.x,n.y,tf.y,idf.y,tf_idf.y,word.x,word.y))
   
   #Make a data matrix to work with Complex heatmap
   pp <- as.matrix(p)
@@ -159,7 +159,7 @@ PathwayHUNTER <- function(x,y,z,num){
   
   #making table
   #Varibal z is how you can make a table just put the file name and it will make a table with
-  Table <- dplyr::select(myData, -c(level,n.x,tf.x,idf.x,tf_idf.x,n.y,tf.y,idf.y,tf_idf.y,word.x,word.y,GOID,ClusterWord,cluster))
+  Table <- dplyr::select(myData, -c(level,n.x,tf.x,idf.x,tf_idf.x,n.y,tf.y,idf.y,tf_idf.y,word.x,word.y))
   Table <- merge(Table, SubPval,by.x = "cluster", by.y = "Clusters")
   # select variables v1, v2, v3
   myvars <- c("GOID", "TERM")
